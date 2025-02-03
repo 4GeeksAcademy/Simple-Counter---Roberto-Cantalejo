@@ -15,6 +15,8 @@ import React, { useState, useEffect } from "react";
         setCounterStart(true);
     },[])
 
+// Aquí declaro dos hooks para crear el intervalo que incrementa y el que reduce.
+
     useEffect(() => {
         let interval;
         if (counterStart == true && reversedCounterStart == false) {
@@ -34,6 +36,8 @@ import React, { useState, useEffect } from "react";
         }
         return () => clearInterval(reversedInterval);
     }, [reversedCounterStart, counterStart]);
+
+    // Aquí están mis funciones para todos los eventos onClick
 
     const pressStart = () => {
         setCounterStart(true);
