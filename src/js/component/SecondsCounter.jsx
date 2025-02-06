@@ -6,7 +6,7 @@ import React, { useState, useEffect } from "react";
 
     const SecondsCounter = () => {
     const [counter, setCounter] = useState(0);
-    const [counterStart, setCounterStart] = useState(false);
+    const [counterStart, setCounterStart] = useState(true);
     const [reversedCounterStart, setReversedCounterStart] = useState(false);
 
 // Aquí declaro que el contador está activo para que empiece nada mas recargar.
@@ -35,7 +35,7 @@ import React, { useState, useEffect } from "react";
             }, 1000);
         }
         return () => clearInterval(reversedInterval);
-    }, [reversedCounterStart, counterStart]);
+    }, [reversedCounterStart]);
 
     // Aquí están mis funciones para todos los eventos onClick
 
